@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
                 String loginEmail = loginEmailText.getText().toString();
                 String loginPass  =loginPassText.getText().toString();
 
@@ -61,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
+
                                 sendToItemList();
 
                             }else {
@@ -73,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                 }
+
+
             }
         });
 

@@ -54,8 +54,6 @@ public class SetupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
 
-
-
         Toolbar setupToolbar = findViewById(R.id.setupToolbar);
         setSupportActionBar(setupToolbar);
         getSupportActionBar().setTitle("Account Settings");
@@ -121,11 +119,8 @@ public class SetupActivity extends AppCompatActivity {
 
                 if (isChanged) {
 
-
-
-
                         user_id = firebaseAuth.getCurrentUser().getUid();
-
+                     
 
                         StorageReference image_path = storageReference.child("profile_images").child(user_id + ".jpg");
                         image_path.putFile(mainImageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
